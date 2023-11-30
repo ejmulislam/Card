@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.7;
+    box-sizing: border-box;
+}
+
+/* Grid Start */
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+    transform: translateY(50%);
+}
+
+.row:not(:last-child) {
+    margin-bottom: 8rem;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row [class^="col-"] {
+    float: left;
+}
+
+.row .col-1-of-4 {
+    width: calc(100% / 4);
+}
+
+/* Grid End */
+
+.carve {
+    height: 90vh;
+    background-image: linear-gradient(to right bottom, rgba(83, 194, 52, 0.8), rgba(6, 23, 0, 0.8)), url(https://i.postimg.cc/L6WTT3jT/hero.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+.card__carve {
+    padding: 6rem 2rem;
+    text-align: center;
+    color: #ecf0f1;
+}
+
+.card__carve-v1 {
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    background-color: #3498db;
+    transition: all 0.5s;
+}
+
+.card__carve-v1:hover {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.card__carve-v2 {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+    background-color: #2980b9;
+    transition: all 0.5s;
+}
+
+.card__carve-v2:hover {
+    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
+}
+
+.icon-font {
+    font-size: 3rem !important;
+    margin-bottom: 1.5rem;
+}
